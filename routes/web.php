@@ -15,7 +15,7 @@
 //http://api.restaurantreview.test/v1/restaurant/vote restaurant_id
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return 'API ' . env('APP_VERSION');
 });
 
 $router->group(['prefix' => 'v1'], function() use ($router) {
