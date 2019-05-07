@@ -17,6 +17,9 @@
 $router->get('/', function () use ($router) {
     return 'API ' . env('APP_VERSION');
 });
+$router->get('/version', function () use ($router) {
+    return 'API ' . env('APP_VERSION');
+});
 
 $router->group(['prefix' => 'v1'], function() use ($router) {
     $router->post('restaurant/upvote', ['uses' => 'RestaurantController@upvote']);
